@@ -28,3 +28,5 @@ node-env-14-img: Dockerfile
 node-env-16-img: Dockerfile
 
 node-env-18-img: Dockerfile
+
+node-env-20-img: Dockerfile
