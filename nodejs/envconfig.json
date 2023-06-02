@@ -117,5 +117,53 @@
     "shortDescription": "Fission NodeJS environment based on Express with some basic dependencies added",
     "status": "Stable",
     "version": "1.32.2"
+  },
+  {
+    "builder": "node-builder-18",
+    "examples": "https://github.com/fission/environments/tree/master/nodejs/examples",
+    "icon": "./logo/nodejs-new-pantone-black.svg",
+    "image": "node-env-18",
+    "keywords": [],
+    "kind": "environment",
+    "maintainers": [
+      {
+        "link": "https://github.com/sanketsudake",
+        "name": "sanketsudake"
+      },
+      {
+        "link": "https://github.com/vishal-biyani",
+        "name": "vishal-biyani"
+      }
+    ],
+    "name": "Nodejs Environment",
+    "readme": "https://github.com/fission/environments/tree/master/nodejs",
+    "runtimeVersion": "18.16.0",
+    "shortDescription": "Fission NodeJS environment based on Express with some basic dependencies added",
+    "status": "Stable",
+    "version": "1.32.2"
+  },
+  {
+    "builder": "node-builder-20",
+    "examples": "https://github.com/fission/environments/tree/master/nodejs/examples",
+    "icon": "./logo/nodejs-new-pantone-black.svg",
+    "image": "node-env-20",
+    "keywords": [],
+    "kind": "environment",
+    "maintainers": [
+      {
+        "link": "https://github.com/sanketsudake",
+        "name": "sanketsudake"
+      },
+      {
+        "link": "https://github.com/vishal-biyani",
+        "name": "vishal-biyani"
+      }
+    ],
+    "name": "Nodejs Environment",
+    "readme": "https://github.com/fission/environments/tree/master/nodejs",
+    "runtimeVersion": "20.2.0",
+    "shortDescription": "Fission NodeJS environment based on Express with some basic dependencies added",
+    "status": "Stable",
+    "version": "1.32.2"
   }
 ]

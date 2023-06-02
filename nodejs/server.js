@@ -227,34 +227,31 @@ interval = setInterval(() => {
     } else {
       // After we have pinged all clients and verified number of active connections is 0, we generate event for inactivity on the websocket
       request(wsInactiveEvent, (err, res) => {
-        if (err || res.statusCode != 200) {
+        if (err || res.statusCode !== 200) {
           if (err) {
             console.log(err);
           } else {
             console.log("Unexpected response");
           }
           ws.send("Error");
-          return;
         }
       });
-      return;
     }
   }
 }, timeout);
 
 wss.on("connection", (ws) => {
-  if (warm == false) {
+  if (warm === false) {
     warm = true;
     // On successful request, there's no body returned
     request(wsStartEvent, (err, res) => {
-      if (err || res.statusCode != 200) {
+      if (err || res.statusCode !== 200) {
         if (err) {
           console.log(err);
         } else {
           console.log("Unexpected response");
         }
         ws.send("Error");
-        return;
       }
     });
   }
