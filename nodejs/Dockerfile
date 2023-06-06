@@ -9,9 +9,11 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
-RUN npm install && npm cache clean --force
+COPY npm-wrapper.sh /usr/local/bin/npm-wrapper
+RUN chmod +x /usr/local/bin/npm-wrapper
+RUN npm-wrapper install && npm-wrapper cache clean --force
 COPY server.js /usr/src/app/server.js
 
-CMD [ "npm", "start" ]
+CMD [ "npm-wrapper", "start" ]
 
 EXPOSE 8888

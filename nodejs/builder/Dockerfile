@@ -10,4 +10,6 @@ ENV NODE_ENV $NODE_ENV
 
 COPY --from=0 /builder /builder
 ADD build.sh /usr/local/bin/build
+ADD npm-wrapper.sh /usr/local/bin/npm-wrapper
+RUN chmod +x /usr/local/bin/npm-wrapper
 RUN chmod +x /usr/local/bin/build
