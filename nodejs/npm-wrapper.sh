@@ -3,7 +3,7 @@
 TMPFILE=$(mktemp "npm-wrapper.XXXXXX")
 
 on_exit() {
-  rm -rf "$TMPFILE"
+  rm -f "$TMPFILE"
 }
 trap on_exit EXIT
 
