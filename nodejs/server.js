@@ -41,7 +41,7 @@ const loadFunction = (modulepath, funcname) => {
       : require(modulepath);
     let elapsed = process.hrtime(startTime);
     console.log(
-      `user code loaded in ${elapsed[0]}sec ${elapsed[1] / 1000000}ms`
+      `user code loaded in ${elapsed[0]}sec ${elapsed[1] / 1000000}ms (${funcname})`
     );
     return userFunction;
   } catch (e) {
@@ -127,7 +127,7 @@ app.use(express.text({ type: "text/*", limit: bodyParserLimit }));
 
 app.post("/specialize", withEnsureGeneric(specialize));
 app.post("/v2/specialize", withEnsureGeneric(specializeV2));
-
+app.get("/digest", )
 // Generic route -- all http requests go to the user function.
 app.all("*", (req, res) => {
   if (!userFunction) {

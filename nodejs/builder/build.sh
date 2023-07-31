@@ -9,6 +9,6 @@ if [[ -d "node_modules" ]]; then
     npm-wrapper run build
   else
     echo "Executing npm install..."
-    npm-wrapper install --no-audit --omit-dev --no-fund --no-progress
+    npm-wrapper install --no-audit --omit-dev --no-fund --no-progress --prefer-offline
 fi
 test $? -eq 0 && cp -r ${SRC_PKG} ${DEPLOY_PKG}
