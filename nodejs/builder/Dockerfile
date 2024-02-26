@@ -4,6 +4,7 @@ ARG BUILDER_IMAGE=fission/builder:latest
 FROM ${BUILDER_IMAGE}
 
 FROM node:${NODE_BASE_IMG}
+RUN apk add --no-cache findutils
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV

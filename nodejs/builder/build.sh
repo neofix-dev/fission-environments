@@ -10,5 +10,18 @@ if [[ -d "node_modules" ]]; then
   else
     echo "Executing npm install..."
     npm-wrapper install --no-audit --omit-dev --no-fund --no-progress --prefer-offline
+    echo "Executing npm run test..."
+    npm-wrapper run test
 fi
-test $? -eq 0 && cp -r ${SRC_PKG} ${DEPLOY_PKG}
+if test $? -eq 0
+then
+    cp -r ${SRC_PKG} ${DEPLOY_PKG}
+else
+  printf "Build failed.\n"
+  printf "Contents of source package:\n"
+  find .
+  printf "---\nContents of functionCode.js:\n---\n"
+  cat functionCode.js
+  printf "---\nContents of test.js:\n---\n"
+  cat test.js
+fi

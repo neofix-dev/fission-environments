@@ -15,7 +15,7 @@ node-env-16-img-buildargs := --build-arg NODE_BASE_IMG=16.12.0-alpine3.14
 
 node-env-18-img-buildargs := --build-arg NODE_BASE_IMG=18.16.0-alpine3.17
 
-node-env-20-img-buildargs := --build-arg NODE_BASE_IMG=20.2.0-alpine3.17
+node-env-20-img-buildargs := --build-arg NODE_BASE_IMG=20.11.1-alpine3.18
 
 node-env-img: Dockerfile
 
