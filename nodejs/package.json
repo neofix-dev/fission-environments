@@ -1,6 +1,6 @@
 {
   "name": "fission-nodejs-runtime",
-  "version": "0.2.9-neofix",
+  "version": "0.2.10-neofix",
   "author": "Soam Vasani",
   "contributors": [
     {
@@ -16,10 +16,6 @@
   "engines": {
     "node": ">= 18.0.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r tsconfig-paths/register server.js"
-  },
   "dependencies": {
     "co": "~4.6.0",
     "express": ">=4.0.0",
@@ -29,7 +25,6 @@
     "request": "^2.81.0",
     "request-promise-native": "^1.0.3",
     "underscore": ">=1.8.3",
-    "ws": "^7.5.5",
-    "tsconfig-paths": "^4.2.0"
+    "ws": "^7.5.5"
   }
 }
